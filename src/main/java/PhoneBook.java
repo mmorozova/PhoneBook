@@ -13,6 +13,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String phoneNumber){
-        return null;
+        return nameToNumber.entrySet().stream()
+                .filter(el -> el.getValue().equals(phoneNumber))
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse(null);
+
     }
 }

@@ -13,6 +13,7 @@ public class PhoneBookTest {
     public void test_find_by_number(){
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Mary", "2466911");
+        phoneBook.add("Ann", "2442529");
         assertEquals("Mary", phoneBook.findByNumber("2466911"));
     }
 }
