@@ -36,7 +36,6 @@ public class PhoneBookTest {
         phoneBook.add("Ann", "2442529");
         phoneBook.add("Eva", "2469460");
 
-
         List<String> expected = Arrays.asList("Ann", "Eva", "Mary");
         List<String> result = phoneBook.printAllNames();
 
