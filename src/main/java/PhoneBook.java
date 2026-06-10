@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -23,5 +25,9 @@ public class PhoneBook {
 
     public String findByName(String name){
         return nameToNumber.get(name);
+    }
+
+    public List<String> printAllNames() {
+        return null;
     }
 }

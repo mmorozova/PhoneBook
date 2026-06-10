@@ -1,4 +1,8 @@
 import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class PhoneBookTest {
@@ -23,5 +27,19 @@ public class PhoneBookTest {
         phoneBook.add("Mary", "2466911");
         phoneBook.add("Ann", "2442529");
         assertEquals("2466911", phoneBook.findByName("Mary"));
+    }
+
+    @Test
+    public void test_print_all_names(){
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Mary", "2466911");
+        phoneBook.add("Ann", "2442529");
+        phoneBook.add("Eva", "2469460");
+
+
+        List<String> expected = Arrays.asList("Ann", "Eva", "Mary");
+        List<String> result = phoneBook.printAllNames();
+
+        assertEquals(expected, result);
     }
 }
